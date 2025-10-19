@@ -13,3 +13,4 @@ venv/
 # Editors
 .vscode/
 .idea/
+.claude/
