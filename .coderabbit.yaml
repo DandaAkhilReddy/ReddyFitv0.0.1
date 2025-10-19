@@ -1,0 +1,39 @@
+# CodeRabbit Configuration
+# Visit https://docs.coderabbit.ai for more details
+
+language: en-US
+early_access: false
+reviews:
+  profile: chill
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: false
+  auto_review:
+    enabled: true
+    drafts: false
+  path_instructions:
+    - path: "app/**/*.py"
+      instructions: |
+        - Focus on FastAPI best practices and async/await patterns
+        - Check for proper error handling and logging
+        - Verify Pydantic schema validation
+        - Review security considerations for API endpoints
+    - path: "app/services/*.py"
+      instructions: |
+        - Ensure proper abstraction and separation of concerns
+        - Check for proper resource cleanup (storage, connections)
+        - Verify error handling for external services
+    - path: "tests/**/*.py"
+      instructions: |
+        - Verify test coverage for critical paths
+        - Check for proper mocking of external dependencies
+        - Ensure tests are independent and idempotent
+    - path: "*.md"
+      instructions: |
+        - Check for clarity and completeness
+        - Verify links and code examples work
+        - Ensure consistency in formatting
+chat:
+  auto_reply: true
